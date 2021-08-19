@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Image, Modal, Grid, Row, Col } from 'react-bootstrap';
 import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
 
 class ModalComponent extends Component {
     constructor(props) {
@@ -31,20 +29,21 @@ class ModalComponent extends Component {
         })
     }
 
+    render() {
     render(){
         const {images, currentImageIndex} = this.state;
         const {onClose, index} = this.props;
 
-        return(
+        return (
             <Lightbox
-        mainSrc={images[currentImageIndex]}
-        nextSrc={images[(currentImageIndex + 1) % images.length]}
-        prevSrc={images[(currentImageIndex + images.length - 1) % images.length]}
-        onCloseRequest={onClose}
-        onMovePrevRequest={this.onMovePrevRequest}
-        onMoveNextRequest={this.onMoveNextRequest}
-    />
-    )
+                mainSrc={images[currentImageIndex]}
+                nextSrc={images[(currentImageIndex + 1) % images.length]}
+                prevSrc={images[(currentImageIndex + images.length - 1) % images.length]}
+                onCloseRequest={onClose}
+                onMovePrevRequest={this.onMovePrevRequest}
+                onMoveNextRequest={this.onMoveNextRequest}
+            />
+        )
     }
 
 }

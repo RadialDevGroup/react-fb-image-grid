@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {render} from 'react-dom'
-import '../../src/css/style.css';
+import '../../src/css/index.css';
 import FbImageLibrary from '../../src'
 
 const images = ['https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&h=350',
@@ -16,7 +16,7 @@ class Demo extends Component {
     render() {
         return <div style={{width: "500px"}}>
             <FbImageLibrary images={images}
-            
+
             />
         </div>
     }

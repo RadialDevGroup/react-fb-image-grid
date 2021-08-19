@@ -1,8 +1,3 @@
-/* @import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css';
-@import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'; */
-
-/* Images Component CSS */
-
 .grid-container {
   text-align: center;
   margin: auto;
@@ -16,9 +11,7 @@
   width: 100% !important;
 }
 
-.container *{
-  margin: 0;
-  padding: 0;
+.MuiGrid-container-1 {
   cursor: pointer;
 }
 

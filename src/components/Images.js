@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Grid} from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import Modal from './Modal'
 import PropTypes from 'prop-types';
 

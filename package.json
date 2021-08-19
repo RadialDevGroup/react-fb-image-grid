@@ -2,12 +2,12 @@
   "name": "react-fb-image-grid",
   "version": "0.1.5",
   "description": "A beautifully featured image grid library for React which represents the images just like the facebook grid images with the count for extra as well",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "module": "es/index.js",
   "files": [
     "css",
     "es",
-    "lib",
+    "dist",
     "umd"
   ],
   "scripts": {
@@ -17,7 +17,9 @@
     "start": "nwb serve-react-demo",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "test:watch": "nwb test-react --server",
+    "build:dist": "npm run build && rimraf dist/ && babel lib/ --out-dir dist/ && npm run build:css",
+    "build:css": "mkdir dist/css/ && cp lib/css/index.css dist/css/index.css"
   },
   "dependencies": {
     "@material-ui/core": "^3.1.2",
@@ -30,7 +32,8 @@
   "devDependencies": {
     "nwb": "0.23.x",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "rimraf": "^3.0.2"
   },
   "author": "Mohammad Kashif Sulaiman",
   "homepage": "https://github.com/Expertizo/react-fb-image-grid",
